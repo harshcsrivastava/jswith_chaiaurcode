@@ -34,3 +34,29 @@ specially function ka datatype 'Object Function' hai. return me function me ayeg
 const id = Symbol('2140')
 const anotherId = Symbol('2140')
 console.log(id === anotherId); //Both are different even though same jaa rha
+
+/*
+Two types of Memory:
+Stack(Primitive){Copy milti} and Heap(Non-Primitive){Original Value change, reference milta}
+*/
+
+let name = "HIii"
+let realName = name
+realName = "Harsh"
+console.log(name);
+console.log(realName);
+//Change in Copy
+
+let seniorOfficerOne = {
+    email:"Yohoho@onepiece.in",
+    crew:"StrawHats",
+}
+
+let srOfficerOne = seniorOfficerOne
+srOfficerOne.email = "brook@onepiece.in"
+
+console.log(seniorOfficerOne);
+console.log(seniorOfficerOne.email);
+console.log(srOfficerOne.email);
+
+//Change in reference i.e. Address
