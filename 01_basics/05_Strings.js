@@ -33,4 +33,4 @@ let gameName = new String('AeoPhics-HCS')
 
 // .includes() method, returns boolean
 
-console.log(gameName.split('-')); // to extract string in array using any separator, here "-" is used
+console.log(gameName.split('-')); // to extract string in array form using any separator, here "-" is used

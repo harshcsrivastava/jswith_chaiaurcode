@@ -20,7 +20,7 @@ let myObj = {
 const meraFun = function () {
     console.log("hello there \n");
 }
-
+meraFun();
 console.log(typeof myObj);
 /* TypeOfDatatype
 undefined => undefined
