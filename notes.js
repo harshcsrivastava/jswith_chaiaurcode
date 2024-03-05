@@ -60,3 +60,6 @@ console.log(seniorOfficerOne.email);
 console.log(srOfficerOne.email);
 
 //Change in reference i.e. Address
+
+
+// let and const have local scope in curlys while var have global scope in curlys
