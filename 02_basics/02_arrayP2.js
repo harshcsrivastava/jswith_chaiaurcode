@@ -19,12 +19,13 @@ let allNewHeros = [...marvel_heros, ...dc_heros]
 let aArray = [1,2,3,[4,5,6], 7, [6,7,[4,5]]]
 // aArray.flat(depth) => kitne depth tak flat kare
 let simpleArr = aArray.flat(Infinity)
-// console.log(simpleArr);
+console.log(simpleArr);
 
 // When we select data from web page it comes in from node list or something else but we need in the form of array so we use this
 
 console.log(Array.isArray("Harsh"));
 console.log(Array.from("12345")); //converts to array from elements
+console.log(Array.from("Harsh"));
 console.log(Array.from({name:"Harsh"})); //Interesting
 
 let score1 = 42
