@@ -45,4 +45,35 @@ function userGreetings(username = "NewPet"){
 }
 
 // console.log(userGreetings("Harsh")); //if no value passed to "undefined" output ayega
-console.log(userGreetings("Supes"));
+// console.log(userGreetings("Supes"));
+
+function cartItem(...num){ //idhar ise rest case bolte na ki "SPREAD OPERATOER"
+    return num;
+}
+
+// OR
+function cartItem2(val1, val2, ...num){ //idhar ise rest case bolte na ki "SPREAD OPERATOER"
+    return num; //baas array print hoga
+}
+// console.log(cartItem2(200,2939,23,"harsh"));
+
+const user = {
+    name: "Harsh",
+    level: "noob",
+    rank: 9999
+}
+function handleObj(inpObj){
+    console.log(`User ${inpObj["name"]} just logged in and has experience of ${inpObj["rank"]}`);
+}
+// handleObj(user)
+handleObj({ //Direct object pass kiya
+    name:"Hola",
+    rank:292
+})
+
+const array = [24,42 ,42,424]
+
+function secondValueOfArray(givenArray){
+    return givenArray[1]
+}
+console.log(secondValueOfArray(array));
