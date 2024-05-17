@@ -1,0 +1,84 @@
+<!-- 
+    0	UNSENT	Client has been created. open() not called yet.
+    1	OPENED	open() has been called.
+    2  	HEADERS_RECEIVED	send() has been called, and headers and status are available.
+    3	LOADING	Downloading; responseText holds partial data.
+    4	DONE	The operation is complete.
+Talking language between two system, for more refer to his video
+
+- randomuser.me
+- https://api.github.com/users/harshcsrivastava
+- json formatter
+.
+data jo ata hamesha "string" ata hai
+so convert krenge object me
+const data = JSON.parse(this.responseText) => convert string to DATA
+ -->
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        .card{
+            width:500px;
+            height: 500px;
+            background-color: #40444a;
+            border-radius: 4px;
+            padding: 10px;
+            display:flex;
+            flex-direction:column;
+            justify-content: space-between;
+            align-items: center;
+            
+            & #pfp{
+                width:100%;
+                height: 80%;
+                object-fit: cover;
+            }
+        }
+        body{
+            /* width:500px; */
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body style="background-color: #212121; color: aliceblue;" >
+    <div class="card">
+        <img src="" alt="" id="pfp">
+        <h1 id="name">Mr. HITESH CHAUDHARY</h1>
+        <p id="followers"></p>
+    </div>
+</body>
+<script>
+    const requestUrl = 'https://api.github.com/users/hiteshchoudhary'
+    const xhr = new XMLHttpRequest();
+    const photo = document.querySelector('#pfp')
+    const followers= document.querySelector('#followers')
+
+    xhr.open('GET', requestUrl)
+    xhr.onreadystatechange = function(){
+        console.log(xhr.readyState);
+        if (xhr.readyState === 4) {
+            const data = JSON.parse(this.responseText)
+            console.log(data);
+            console.log(data.followers);
+            console.log(data.avatar_url);
+            photo.setAttribute('src', `${data.avatar_url}`)
+            followers.innerHTML = `Currrent Followers: ${data.followers}`
+        }
+    }
+    xhr.send();
+</script>
+</html>
