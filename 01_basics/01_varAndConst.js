@@ -7,7 +7,7 @@ let nothing
 
 /*
 Always use const and let. 
-var keyword is not in use due to issues in block scope
+var keyword is not in use due to issues in block scope, var can be redeclarred and redefined globally used [baaki redeclare nhi ho skte]
 Values of a const cannot be altered.
 */
 // Adding some changes
